@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GADE5112 - 20104162 - POE", "GADE5112 - 20104162 - POE\GADE5112 - 20104162 - POE.csproj", "{4D573D5C-16C8-42FF-9038-6E706338616E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D573D5C-16C8-42FF-9038-6E706338616E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D573D5C-16C8-42FF-9038-6E706338616E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D573D5C-16C8-42FF-9038-6E706338616E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D573D5C-16C8-42FF-9038-6E706338616E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {530B43E1-D00F-44EC-889B-8B4429641849}
+	EndGlobalSection
+EndGlobal
