@@ -40,12 +40,15 @@
             this.load_btn = new System.Windows.Forms.Button();
             this.start_btn = new System.Windows.Forms.Button();
             this.shop_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // heroStats_LB
             // 
             this.heroStats_LB.AutoSize = true;
-            this.heroStats_LB.Location = new System.Drawing.Point(382, 133);
+            this.heroStats_LB.Location = new System.Drawing.Point(382, 131);
             this.heroStats_LB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heroStats_LB.Name = "heroStats_LB";
             this.heroStats_LB.Size = new System.Drawing.Size(75, 17);
@@ -65,7 +68,7 @@
             // 
             this.heroName_LB.AutoSize = true;
             this.heroName_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.heroName_LB.Location = new System.Drawing.Point(382, 102);
+            this.heroName_LB.Location = new System.Drawing.Point(382, 100);
             this.heroName_LB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heroName_LB.Name = "heroName_LB";
             this.heroName_LB.Size = new System.Drawing.Size(89, 17);
@@ -77,7 +80,7 @@
             // 
             this.heroAttack_ListBox.FormattingEnabled = true;
             this.heroAttack_ListBox.ItemHeight = 16;
-            this.heroAttack_ListBox.Location = new System.Drawing.Point(89, 379);
+            this.heroAttack_ListBox.Location = new System.Drawing.Point(91, 377);
             this.heroAttack_ListBox.Name = "heroAttack_ListBox";
             this.heroAttack_ListBox.Size = new System.Drawing.Size(134, 100);
             this.heroAttack_ListBox.TabIndex = 4;
@@ -86,7 +89,7 @@
             // enemyStats_LB
             // 
             this.enemyStats_LB.AutoSize = true;
-            this.enemyStats_LB.Location = new System.Drawing.Point(382, 314);
+            this.enemyStats_LB.Location = new System.Drawing.Point(382, 312);
             this.enemyStats_LB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.enemyStats_LB.Name = "enemyStats_LB";
             this.enemyStats_LB.Size = new System.Drawing.Size(87, 17);
@@ -106,7 +109,7 @@
             // 
             // attack_BTN
             // 
-            this.attack_BTN.Location = new System.Drawing.Point(246, 379);
+            this.attack_BTN.Location = new System.Drawing.Point(246, 377);
             this.attack_BTN.Name = "attack_BTN";
             this.attack_BTN.Size = new System.Drawing.Size(88, 100);
             this.attack_BTN.TabIndex = 7;
@@ -127,7 +130,8 @@
             // 
             this.map.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.map.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.map.Location = new System.Drawing.Point(55, 102);
+            this.map.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.map.Location = new System.Drawing.Point(55, 100);
             this.map.Name = "map";
             this.map.ReadOnly = true;
             this.map.Size = new System.Drawing.Size(313, 271);
@@ -163,12 +167,34 @@
             this.shop_btn.UseVisualStyleBackColor = true;
             this.shop_btn.Click += new System.EventHandler(this.shop_btn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 119);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "H - Hero\r\nX - Wall\r\nW - Weapon\r\nG - Gold\r\nK - Goblin\r\nM - Mage\r\nL - Leader\r\n";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(528, 100);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(106, 154);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Legend";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(537, 657);
+            this.ClientSize = new System.Drawing.Size(646, 657);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.shop_btn);
             this.Controls.Add(this.start_btn);
             this.Controls.Add(this.load_btn);
@@ -185,6 +211,8 @@
             this.Name = "GameForm";
             this.Text = "Rogue Game";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +231,8 @@
         private System.Windows.Forms.Button load_btn;
         private System.Windows.Forms.Button start_btn;
         private System.Windows.Forms.Button shop_btn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

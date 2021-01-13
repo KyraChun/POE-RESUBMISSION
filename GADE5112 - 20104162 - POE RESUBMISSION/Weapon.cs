@@ -109,7 +109,7 @@ namespace GADE5112___20104162___Task_1
             if (weaponType == Types.Dagger)
             {
                 weaponTypeAccessor = "Dagger";
-                durabilityAccessor = 3;
+                durabilityAccessor = 10;
                 damageAccessor = 3;
                 costAccessor = 3;
             }
@@ -137,11 +137,11 @@ namespace GADE5112___20104162___Task_1
 
             get
             {
-                return rangeAccessor;
+                return 1;
             }
             set
             {
-                rangeAccessor = 1;
+                rangeAccessor = value;
             }
         }
 

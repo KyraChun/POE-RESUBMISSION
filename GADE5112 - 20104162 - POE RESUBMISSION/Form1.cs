@@ -25,38 +25,47 @@ namespace GADE5112___20104162___Task_1
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             //capture Up arrow key
+
             if (keyData == Keys.Up)
             {
                 if (gameEng.MovePlayer(Character.Movement.Up) == false) { };
                 updateMap();
                 return true;
             }
+
             //capture Down arrow key
+
             if (keyData == Keys.Down)
             {
                 if (gameEng.MovePlayer(Character.Movement.Down) == false) { };
                 updateMap();
                 return true;
             }
+
             //capture Left arrow key
+
             if (keyData == Keys.Left)
             {
                 if (gameEng.MovePlayer(Character.Movement.Left) == false) { };
                 updateMap();
                 return true;
             }
+
             //capture Right arrow key
+
             if (keyData == Keys.Right)
             {
                 if (gameEng.MovePlayer(Character.Movement.Right) == false) { };
                 updateMap();
                 return true;
             }
+
             if (keyData == Keys.Space)
             {
                 attack_BTN.PerformClick();
                 return true;
             }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -90,11 +99,22 @@ namespace GADE5112___20104162___Task_1
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-            localmap = new Map(10, 20, 10, 20, 5, 10, 3);
+            //Used to randomise the size of the map, number of enemies, gold drop and weapon drop
+
+            int minWidth = random.Next(1, 11);
+            int maxWidth = random.Next(11, 21);
+            int minHeight = random.Next(1, 11);
+            int maxHeight = random.Next(11, 21);
+            int enemies = random.Next(8);
+            int gold = random.Next(1, 6);
+            int weapons = random.Next(6);
+
+            heroName_LB.Text = Convert.ToString(heroName_TB.Text);
+            localmap = new Map(minWidth, maxWidth, minHeight, maxHeight, enemies, gold, weapons);
             gameEng = new GameEngine(localmap);
             border = gameEng.map.MapWidthGrab - 1;
             updateMap();
-            heroName_LB.Text = Convert.ToString(heroName_TB.Text);
+
         }
 
         private void updateMap()

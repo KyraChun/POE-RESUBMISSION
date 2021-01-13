@@ -13,11 +13,11 @@ namespace GADE5112___20104162___Task_1
         //This is the true base class for your Hero and Goblin classes.
 
         protected Tile[,] characterVisionArray;
-        public int characterHP
+        protected int characterHP
         { get; set; }
         protected int characterMaxHP
         { get; set; }
-        public int characterDamage
+        protected int characterDamage
         { get; set; }
         public int goldPurse
         { get; set; }
