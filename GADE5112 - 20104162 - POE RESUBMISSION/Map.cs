@@ -162,17 +162,17 @@ namespace GADE5112___20104162___Task_1
 
                     //Your Enemy array in map should now randomize between Goblins, Mages and Leaders.
 
-                    int typeEnemy = random.Next(4);
+                    int typeEnemy = random.Next(3);
 
-                    if (typeEnemy <= 1)
+                    if (typeEnemy <= 0)
                     {
                         tempTile = new Goblin(randomX, randomY);
                     }
-                    else if (typeEnemy <= 2)
+                    else if (typeEnemy <= 1)
                     {
                         tempTile = new Mage(randomX, randomY);
                     }
-                    else if (typeEnemy <= 3)
+                    else if (typeEnemy <= 2)
                     {
                         tempTile = new Leader(randomX, randomY);
                     }
@@ -186,19 +186,19 @@ namespace GADE5112___20104162___Task_1
 
                     int typeWeapon = random.Next(4);
 
-                    if (typeWeapon <= 1)
+                    if (typeWeapon <= 0)
                     {
                         tempTile = new MeleeWeapon(randomX, randomY, 'D', MeleeWeapon.Types.Dagger);
                     }
-                    else if (typeWeapon <= 2)
+                    else if (typeWeapon <= 1)
                     {
                         tempTile = new MeleeWeapon(randomX, randomY, 'S', MeleeWeapon.Types.Longsword);
                     }
-                    else if (typeWeapon <= 3)
+                    else if (typeWeapon <= 2)
                     {
                         tempTile = new RangedWeapon(randomX, randomY, 'R', RangedWeapon.Types.Rifle);
                     }
-                    else if (typeWeapon <= 4)
+                    else if (typeWeapon <= 3)
                     {
                         tempTile = new RangedWeapon(randomX, randomY, 'B', RangedWeapon.Types.Longbow);
                     }

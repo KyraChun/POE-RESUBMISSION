@@ -13,7 +13,7 @@ namespace GADE5112___20104162___Task_1
         //      •	A Random object to randomise numbers 
         //      •	A Character object to denote the buyer(who to deduct gold from when buying)
 
-        private Weapon[] weaponTypeArray = new Weapon[3];
+        private Weapon[] weaponTypeArray = new Weapon[4];
         private Random random = new Random();
         private Character buyer;
 
@@ -23,11 +23,12 @@ namespace GADE5112___20104162___Task_1
             // Loops through the Weapon array, placing a random weapon in each slot through the RandomWeapon() method.
 
             Character buyer;
-            Weapon[] weaponTypeArray = new Weapon[3];
+            Weapon[] weaponTypeArray = new Weapon[4];
             Random random = new Random();
 
             foreach (var item in weaponTypeArray)
             {
+
                 RandomWeapon();
             }
         }
@@ -41,6 +42,11 @@ namespace GADE5112___20104162___Task_1
             MeleeWeapon longsword = new MeleeWeapon(position, position, 'S', MeleeWeapon.Types.Longsword);
             RangedWeapon rifle = new RangedWeapon(position, position, 'R', RangedWeapon.Types.Rifle);
             RangedWeapon longbow = new RangedWeapon(position, position, 'B', RangedWeapon.Types.Longbow);
+
+            weaponTypeArray[0] = dagger;
+            weaponTypeArray[1] = longsword;
+            weaponTypeArray[2] = rifle;
+            weaponTypeArray[3] = longbow;
 
             switch (position)
             {

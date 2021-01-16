@@ -51,15 +51,19 @@ namespace GADE5112___20104162___Task_1
             //It then sets all the relevant member variables.
         }
 
-        private Tile leaderTarget
+        //A private Tile that is denoted as the Leader’s target with get and set accessors.
+
+        private Character leaderTarget;
+        private Tile target
         {
             get
             {
                 return leaderTarget;
             }
+
             set
             {
-                leaderTarget = value;
+                target = leaderTarget;
             }
         }
 
@@ -78,6 +82,7 @@ namespace GADE5112___20104162___Task_1
             int x, y;
             x = 0;
             y = 0;
+
             switch (selectedMove)
             {
                 case Movement.NoMovement:

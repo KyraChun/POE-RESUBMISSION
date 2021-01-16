@@ -54,15 +54,6 @@ namespace GADE5112___20104162___Task_1
             X = x;
             Y = y;
 
-            //char hero = 'H';
-            //char enemy = 'E';
-            //char gold = 'G';
-            //char weapon = 'W';
-            //hero = (char)TileType.Hero;
-            //enemy = (char)TileType.Enemy;
-            //gold = (char)TileType.Gold;
-            //weapon = (char)TileType.Weapon;
-
         }
     }
 

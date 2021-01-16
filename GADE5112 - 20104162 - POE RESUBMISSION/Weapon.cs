@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static GADE5112___20104162___Task_1.Character;
 
 namespace GADE5112___20104162___Task_1
 {
@@ -94,7 +95,6 @@ namespace GADE5112___20104162___Task_1
         {
 
         }
-
     }
 
     class MeleeWeapon : Weapon
