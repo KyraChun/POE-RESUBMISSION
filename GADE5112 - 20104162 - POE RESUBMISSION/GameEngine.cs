@@ -13,7 +13,7 @@ namespace GADE5112___20104162___Task_1
 
         //Give the GameEngine class a Shop object. 
 
-        Shop shopObj = new Shop();
+        //Shop shopObj = new Shop();
 
         public GameEngine(Map map)
         {

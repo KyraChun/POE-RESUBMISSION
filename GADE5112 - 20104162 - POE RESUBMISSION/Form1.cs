@@ -170,9 +170,9 @@ namespace GADE5112___20104162___Task_1
         {
             // Assigned to the Form button to describe what is in the shop and how much it costs. 
 
-            int weapon = random.Next(1, 3);
-            Shop myShop = new Shop();
-            myShop.DisplayWeapon(weapon);
+            //int weapon = random.Next(1, 3);
+            //Shop myShop = new Shop();
+            //myShop.DisplayWeapon(weapon);
         }
     }
 }

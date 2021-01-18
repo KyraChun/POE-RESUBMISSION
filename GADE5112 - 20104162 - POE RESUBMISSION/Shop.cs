@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static GADE5112___20104162___Task_1.Character;
 
 namespace GADE5112___20104162___Task_1
 {
@@ -17,19 +18,16 @@ namespace GADE5112___20104162___Task_1
         private Random random = new Random();
         private Character buyer;
 
-        public Shop() 
+
+
+        public Shop(Character buyer) 
         {
             // A constructor that receives a Character parameter to set as the buyer, initialises the Weapon array and the Random object.
             // Loops through the Weapon array, placing a random weapon in each slot through the RandomWeapon() method.
 
-            Character buyer;
-            Weapon[] weaponTypeArray = new Weapon[4];
-            Random random = new Random();
-
-            foreach (var item in weaponTypeArray)
+            for (int i = 0; i < 4; i++)
             {
-
-                RandomWeapon();
+                weaponTypeArray[i] = RandomWeapon();
             }
         }
 
@@ -37,35 +35,33 @@ namespace GADE5112___20104162___Task_1
         {
             //Randomises and returns either a Dagger, Longsword, Longbow or Rifle object. 
 
-            int position = random.Next(5);
+            int position = random.Next(4);
             MeleeWeapon dagger = new MeleeWeapon(position, position, 'D', MeleeWeapon.Types.Dagger);
             MeleeWeapon longsword = new MeleeWeapon(position, position, 'S', MeleeWeapon.Types.Longsword);
             RangedWeapon rifle = new RangedWeapon(position, position, 'R', RangedWeapon.Types.Rifle);
             RangedWeapon longbow = new RangedWeapon(position, position, 'B', RangedWeapon.Types.Longbow);
 
-            weaponTypeArray[0] = dagger;
-            weaponTypeArray[1] = longsword;
-            weaponTypeArray[2] = rifle;
-            weaponTypeArray[3] = longbow;
-
             switch (position)
             {
-                case 1:
+                case 0:
                     return dagger;
                     break;
-                case 2:
+                case 1:
                     return longsword;
                     break;
-                case 3:
+                case 2:
                     return rifle;
                     break;
-                case 4:
+                case 3:
                     return longbow;
                     break;
                 default:
                     return null;
             }
         }
+
+        
+    
 
         public bool CanBuy(int num)
         {
