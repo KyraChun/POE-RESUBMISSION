@@ -118,7 +118,7 @@
             // 
             // save_btn
             // 
-            this.save_btn.Location = new System.Drawing.Point(200, 529);
+            this.save_btn.Location = new System.Drawing.Point(253, 521);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(134, 46);
             this.save_btn.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             // load_btn
             // 
-            this.load_btn.Location = new System.Drawing.Point(385, 529);
+            this.load_btn.Location = new System.Drawing.Point(438, 521);
             this.load_btn.Name = "load_btn";
             this.load_btn.Size = new System.Drawing.Size(134, 46);
             this.load_btn.TabIndex = 10;
@@ -149,7 +149,7 @@
             // 
             // start_btn
             // 
-            this.start_btn.Location = new System.Drawing.Point(12, 529);
+            this.start_btn.Location = new System.Drawing.Point(65, 521);
             this.start_btn.Name = "start_btn";
             this.start_btn.Size = new System.Drawing.Size(134, 46);
             this.start_btn.TabIndex = 11;
@@ -159,7 +159,7 @@
             // 
             // shop_btn
             // 
-            this.shop_btn.Location = new System.Drawing.Point(171, 591);
+            this.shop_btn.Location = new System.Drawing.Point(224, 583);
             this.shop_btn.Name = "shop_btn";
             this.shop_btn.Size = new System.Drawing.Size(196, 54);
             this.shop_btn.TabIndex = 12;

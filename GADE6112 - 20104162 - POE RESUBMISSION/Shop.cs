@@ -18,8 +18,6 @@ namespace GADE5112___20104162___Task_1
         private Random random = new Random();
         private Character buyer;
 
-
-
         public Shop(Character buyer) 
         {
             // A constructor that receives a Character parameter to set as the buyer, initialises the Weapon array and the Random object.
@@ -59,10 +57,7 @@ namespace GADE5112___20104162___Task_1
                     return null;
             }
         }
-
-        
-    
-
+       
         public bool CanBuy(int num)
         {
             //Returns true if the buyer can afford the item in the given slot of the Weapon array based on the buyer’s gold and the weapon’s cost. 
@@ -85,7 +80,6 @@ namespace GADE5112___20104162___Task_1
             buyer.goldPurse -= weaponTypeArray[num].costAccessor;
             //PickUp();
             RandomWeapon();
-
         }
 
         public string DisplayWeapon(int num)
@@ -94,6 +88,5 @@ namespace GADE5112___20104162___Task_1
 
             return $"Buy {weaponTypeArray[num].weaponTypeAccessor} ({weaponTypeArray[num].costAccessor} Gold)";
         }
-
     }
 }

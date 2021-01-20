@@ -91,11 +91,99 @@ namespace GADE5112___20104162___Task_1
             }
         }
 
-        public Weapon(int positionX, int positionY, char symbol) : base(positionX, positionY)
+        public Weapon(int positionX, int positionY, char symbol) : base(positionX, positionY, symbol)
         {
 
         }
+        protected Tile[,] characterVisionArray;
+
+        public Tile[,] characterVision
+        {
+            get
+            {
+                return characterVisionArray;
+            }
+            set
+            {
+                characterVisionArray = value;
+            }
+        }
+
+        public Movement getRandomMove()
+        {
+            Movement selectedMove = Movement.NoMovement;
+            Array values = Enum.GetValues(typeof(Movement));
+            Random random = new Random();
+            selectedMove = (Movement)values.GetValue(random.Next(values.Length));
+            return selectedMove;
+        }
+
+        public Movement ReturnMove(Movement move = 0)
+        {
+            Movement selectedMove = getRandomMove();
+            int x, y;
+            x = 0;
+            y = 0;
+            switch (selectedMove)
+            {
+                case Movement.NoMovement:
+                    selectedMove = Movement.NoMovement;
+                    break;
+                case Movement.Up:
+                    x = 0;
+                    y = 1;
+                    break;
+                case Movement.Down:
+                    x = 0;
+                    y = -1;
+                    break;
+                case Movement.Left:
+                    x = -1;
+                    y = 0;
+                    break;
+                case Movement.Right:
+                    x = 1;
+                    y = 0;
+                    break;
+                default:
+                    selectedMove = Movement.NoMovement;
+                    break;
+            }
+
+            while (characterVision[x, y] != null)
+            {
+                selectedMove = getRandomMove();
+                switch (selectedMove)
+                {
+                    case Movement.NoMovement:
+                        selectedMove = Movement.NoMovement;
+                        break;
+                    case Movement.Up:
+                        x = 0;
+                        y = 1;
+                        break;
+                    case Movement.Down:
+                        x = 0;
+                        y = -1;
+                        break;
+                    case Movement.Left:
+                        x = -1;
+                        y = 0;
+                        break;
+                    case Movement.Right:
+                        x = 1;
+                        y = 0;
+                        break;
+                    default:
+                        selectedMove = Movement.NoMovement;
+                        break;
+                }
+            }
+
+            return selectedMove;
+        }
     }
+
 
     class MeleeWeapon : Weapon
     {
@@ -151,6 +239,7 @@ namespace GADE5112___20104162___Task_1
         }
     }
 
+
     class RangedWeapon : Weapon
     {
         //Qu 2.3 : Create the RangedWeapon class.
@@ -199,7 +288,6 @@ namespace GADE5112___20104162___Task_1
             {  
 
             }
-
         }
 
         public override string ToString()

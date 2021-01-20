@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static GADE5112___20104162___Task_1.Character;
 
 namespace GADE5112___20104162___Task_1
 {
@@ -30,7 +31,7 @@ namespace GADE5112___20104162___Task_1
 
         Random rnd = new Random();
 
-        public Gold(int positionX, int positionY) : base(positionX, positionY, 'G')
+        public Gold(int positionX, int positionY, char symbol) : base(positionX, positionY, 'G')
         {
             //A constructor that receives an X and Y position. It delegates the X and Y position to the Item constructor via a constructor initialiser. 
             //It then sets the amount to a random amount between 1 and 5 (inclusive).

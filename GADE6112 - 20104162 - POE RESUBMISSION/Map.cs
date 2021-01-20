@@ -67,6 +67,14 @@ namespace GADE5112___20104162___Task_1
                 numEnemies[i] = (Enemy)Create(Tile.TileType.Enemy);
             }
 
+            itemArray = new Weapon[(mapWidth + mapHeight) / 3];
+
+            for (int i = 0; i < itemArray.Count(); i++)
+            {
+                //itemArray[i] = (Gold)Create(Tile.TileType.Gold);
+                itemArray[i] = (Weapon)Create(Tile.TileType.Weapon);
+            }
+
             UpdateVision();
             newHero = (Hero)Create(type: Tile.TileType.Hero);
         }
@@ -132,6 +140,20 @@ namespace GADE5112___20104162___Task_1
                     }
                 }
             }
+
+            foreach (Weapon temp in itemArray)
+            {
+                for (int i = -1; i < 2; i++)
+                {
+                    if (i + temp.X >= mapWidth - 1 || i + temp.X < 0) { continue; }
+                    for (int k = -1; k < 2; k++)
+                    {
+                        if (k + temp.Y >= mapHeight - 1 || k + temp.Y < 0) { continue; }
+                        tempTile[temp.X + i, temp.Y + k] = mapArray[temp.X + i, temp.Y + k];
+                        temp.characterVision = tempTile;
+                    }
+                }
+            }
         }
 
         private Tile Create(Tile.TileType type)
@@ -145,6 +167,7 @@ namespace GADE5112___20104162___Task_1
             int gold = random.Next(1, 6);
             int heroHP = 0;
             char heroSymbol = 'H';
+            char goldSymbol = 'G';
             while ((mapArray[randomX, randomY] is EmptyTile) == false)
             {
                 randomX = random.Next(1, mapWidth);
@@ -179,7 +202,7 @@ namespace GADE5112___20104162___Task_1
                     break;
 
                 case Tile.TileType.Gold:
-                    tempTile = new Gold(randomX, randomY);
+                    tempTile = new Gold(randomX, randomY, goldSymbol);
                     break;
 
                 case Tile.TileType.Weapon:
